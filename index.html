@@ -1,600 +1,479 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en" data-mode="recruiters">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2685.6">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Seerat Kohli</title>
+<meta name="description" content="Seerat Kohli: strategic, data-forward product manager with 6+ years of experience.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  /* ---------- Colors: one palette per view ---------- */
+  :root {
+    --bg: #F2F4F8; --surface: #FFFFFF; --ink: #101828; --muted: #566074; --line: #D5DAE3;
+    --accent: #1F4FE0; --accent-ink: #FFFFFF; --accent-soft: #E3EAFF;
+    --display: "Bricolage Grotesque", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+    --body: "Instrument Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+    color-scheme: light;
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  :root[data-mode="clients"] {
+    --bg: #EDF6F2; --surface: #FFFFFF; --ink: #0F2A24; --muted: #4F6A63; --line: #CFE0DA;
+    --accent: #0B7A66; --accent-ink: #FFFFFF; --accent-soft: #D3EDE4;
+  }
+  :root[data-mode="personal"] {
+    --bg: #F8F1F8; --surface: #FFFFFF; --ink: #2A1230; --muted: #6D5675; --line: #E6D3E8;
+    --accent: #B4237A; --accent-ink: #FFFFFF; --accent-soft: #F6D9EA;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0E1424; --surface: #161E33; --ink: #E8ECF5; --muted: #9AA5BD; --line: #26304A;
+      --accent: #7C9BFF; --accent-ink: #0E1424; --accent-soft: #1E2A52; color-scheme: dark;
+    }
+    :root:not([data-theme="light"])[data-mode="clients"] {
+      --bg: #0C1B18; --surface: #12261F; --ink: #E6F4EF; --muted: #9BBBB1; --line: #21433A;
+      --accent: #4FD1B5; --accent-ink: #0C1B18; --accent-soft: #17403A;
+    }
+    :root:not([data-theme="light"])[data-mode="personal"] {
+      --bg: #1A1020; --surface: #241730; --ink: #F5E9F7; --muted: #BBA3C3; --line: #41284F;
+      --accent: #FF7AC3; --accent-ink: #1A1020; --accent-soft: #4A1F3C;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0E1424; --surface: #161E33; --ink: #E8ECF5; --muted: #9AA5BD; --line: #26304A;
+    --accent: #7C9BFF; --accent-ink: #0E1424; --accent-soft: #1E2A52; color-scheme: dark;
+  }
+  :root[data-theme="dark"][data-mode="clients"] {
+    --bg: #0C1B18; --surface: #12261F; --ink: #E6F4EF; --muted: #9BBBB1; --line: #21433A;
+    --accent: #4FD1B5; --accent-ink: #0C1B18; --accent-soft: #17403A;
+  }
+  :root[data-theme="dark"][data-mode="personal"] {
+    --bg: #1A1020; --surface: #241730; --ink: #F5E9F7; --muted: #BBA3C3; --line: #41284F;
+    --accent: #FF7AC3; --accent-ink: #1A1020; --accent-soft: #4A1F3C;
+  }
+
+  *, *::before, *::after { box-sizing: inherit; }
+  html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: var(--body); font-size: 17px; line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    transition: background-color .35s ease, color .35s ease;
+  }
+  a { color: inherit; }
+  :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+
+  .wrap { max-width: 720px; margin: 0 auto; padding: 28px 22px 64px; }
+
+  /* ---------- Hero ---------- */
+  .hero { padding: 28px 0 8px; animation: rise .7s cubic-bezier(.2,.7,.2,1) both; }
+  .avatar {
+    width: 72px; height: 72px; border-radius: 50%;
+    background: var(--accent); color: var(--accent-ink);
+    display: grid; place-items: center;
+    font-family: var(--display); font-weight: 800; font-size: 26px;
+    margin-bottom: 22px; overflow: hidden;
+    transition: background-color .35s ease, color .35s ease;
+  }
+  .avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  h1 {
+    font-family: var(--display); font-weight: 800;
+    font-size: clamp(3rem, 14vw, 5.6rem); line-height: .95; letter-spacing: -0.035em;
+    margin: 0 0 18px;
+  }
+  .where { color: var(--muted); font-size: .95rem; margin: -6px 0 18px; }
+  .where:empty { display: none; }
+  .tagline { font-size: 1.2rem; color: var(--muted); max-width: 36ch; margin: 0 0 26px; min-height: 5.2em; }
+  @media (min-width: 560px) { .tagline { min-height: 3.9em; } }
+
+  /* ---------- View switch ---------- */
+  .switch {
+    display: inline-flex; flex-wrap: wrap; padding: 4px; gap: 4px;
+    background: var(--surface); border: 1px solid var(--line); border-radius: 26px;
+  }
+  .switch button {
+    font: inherit; font-weight: 600; font-size: .95rem;
+    border: 0; background: transparent; color: var(--muted);
+    padding: 10px 16px; border-radius: 999px; cursor: pointer; min-height: 44px;
+    transition: background-color .25s ease, color .25s ease;
+  }
+  .switch button[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); }
+
+  /* ---------- Links ---------- */
+  .links { display: flex; flex-wrap: wrap; gap: 10px; margin: 28px 0 8px; }
+  .links a {
+    text-decoration: none; font-weight: 600; font-size: .98rem;
+    padding: 11px 18px; border-radius: 12px; min-height: 44px;
+    border: 1px solid var(--line); background: var(--surface);
+    transition: border-color .2s ease;
+  }
+  .links a:hover { border-color: var(--accent); }
+  .links a.primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+
+  /* ---------- Sections ---------- */
+  section { margin-top: 56px; }
+  h2 { font-family: var(--display); font-weight: 700; font-size: 1.7rem; letter-spacing: -0.02em; line-height: 1.15; margin: 0 0 18px; }
+  p { margin: 0 0 1em; max-width: 62ch; }
+
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 0; list-style: none; }
+  .chips li {
+    background: var(--accent-soft); color: var(--ink);
+    padding: 6px 14px; border-radius: 999px; font-size: .95rem; font-weight: 500;
+    transition: background-color .35s ease;
+  }
+
+  .rows { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
+  .rows li { display: grid; grid-template-columns: 7.5rem 1fr; gap: 6px 20px; padding: 18px 0; border-bottom: 1px solid var(--line); }
+  .rows .when { color: var(--accent); font-weight: 600; font-size: .95rem; transition: color .35s ease; }
+  .rows .what strong { display: block; font-weight: 600; font-size: 1.05rem; }
+  .rows .what span { color: var(--muted); }
+  @media (max-width: 520px) { .rows li { grid-template-columns: 1fr; } }
+
+  .cards { display: grid; gap: 14px; }
+  .cards a, .cards div.item {
+    display: block; text-decoration: none;
+    background: var(--surface); border: 1px solid var(--line); border-radius: 16px;
+    padding: 20px 22px; transition: border-color .2s ease;
+  }
+  .cards a:hover { border-color: var(--accent); }
+  .cards h3 { font-family: var(--display); font-size: 1.2rem; margin: 0 0 4px; letter-spacing: -0.01em; }
+  .cards p { margin: 0; color: var(--muted); }
+
+  .contact {
+    background: var(--accent); color: var(--accent-ink);
+    border-radius: 22px; padding: 30px 26px;
+    transition: background-color .35s ease, color .35s ease;
+  }
+  .contact h2 { margin-bottom: 8px; }
+  .contact p { margin-bottom: 18px; }
+  .contact a {
+    display: inline-block; text-decoration: none; font-weight: 600;
+    background: var(--accent-ink); color: var(--accent);
+    padding: 12px 20px; border-radius: 12px; min-height: 44px;
+  }
+
+  footer { margin-top: 56px; color: var(--muted); font-size: .9rem; }
+  #content > * { animation: fade .35s ease both; }
+
+  @keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+  @keyframes fade { from { opacity: 0; } to { opacity: 1; } }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+  }
+</style>
 </head>
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="en"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;Dr. Seerat Kohli | Yoga, Wellness &amp; Personal Development&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="description" content="Integrative wellness for mind, body, and purpose. Yoga-informed medical care, wellness coaching, and personal development for busy professionals." /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>:root {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>/* COLORS – EDIT THESE TO CHANGE THE LOOK OF THE SITE */</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--bg: #faf9f7;<span class="Apple-converted-space">        </span>/* main background */</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--text: #2b2b2b;<span class="Apple-converted-space">      </span>/* main text */</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--muted: #6b6b6b; <span class="Apple-converted-space">    </span>/* secondary text */</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--accent: #5a8f7b;<span class="Apple-converted-space">    </span>/* primary button / accent */</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--accent-dark: #3d6b5c;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--card-bg: #ffffff; <span class="Apple-converted-space">  </span>/* card/section white */</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--border: #e6e6e6;<span class="Apple-converted-space">    </span>/* borders */</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>/* FONT */</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--font-main: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>* { box-sizing: border-box; margin: 0; padding: 0; }</p>
-<p class="p1"><span class="Apple-converted-space">    </span>html { scroll-behavior: smooth; }</p>
-<p class="p1"><span class="Apple-converted-space">    </span>body {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-family: var(--font-main);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: var(--bg);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: var(--text);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>line-height: 1.6;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>a { color: var(--accent-dark); text-decoration: none; }</p>
-<p class="p1"><span class="Apple-converted-space">    </span>a:hover { text-decoration: underline; }</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.container {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>max-width: 1100px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin: 0 auto;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 0 20px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>/* Header */</p>
-<p class="p1"><span class="Apple-converted-space">    </span>header {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>position: sticky;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>top: 0;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: rgba(250,249,247,0.95);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-bottom: 1px solid var(--border);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>z-index: 10;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>backdrop-filter: blur(6px);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>nav {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>justify-content: space-between;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>align-items: center;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 16px 0;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>gap: 16px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>flex-wrap: wrap;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.logo {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 700;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1.25rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>letter-spacing: -0.02em;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.nav-links {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>gap: 20px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>flex-wrap: wrap;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.nav-links a {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.95rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: var(--text);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.cta-button {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: inline-block;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: var(--accent);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: #fff;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 10px 18px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 6px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 600;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>text-decoration: none;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>transition: background 0.2s ease;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>text-decoration: none;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.cta-button:hover {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: var(--accent-dark);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>text-decoration: none;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.secondary-button {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: inline-block;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: #fff;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: var(--accent-dark);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 10px 18px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 6px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 600;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid var(--border);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>text-decoration: none;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>transition: background 0.2s ease, color 0.2s ease;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.secondary-button:hover {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: var(--accent);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: #fff;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-color: var(--accent);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>text-decoration: none;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>/* Hero */</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.hero {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 80px 0 60px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>text-align: center;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.hero h1 {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 2.2rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>line-height: 1.2;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 12px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.hero p {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1.05rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: var(--muted);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>max-width: 680px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin: 0 auto 24px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.hero-buttons {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>gap: 12px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>justify-content: center;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>flex-wrap: wrap;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>/* Sections */</p>
-<p class="p1"><span class="Apple-converted-space">    </span>section {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 60px 0;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.section-title {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1.8rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 10px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.section-subtitle {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: var(--muted);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 30px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>max-width: 700px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>/* Cards */</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.grid {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: grid;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));</p>
-<p class="p1"><span class="Apple-converted-space">      </span>gap: 20px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.card {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: var(--card-bg);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid var(--border);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 10px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 20px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>flex-direction: column;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>gap: 12px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.card h3 {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1.2rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 4px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.card p {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: var(--muted);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.95rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>flex-grow: 1;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>/* Blog preview */</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.blog-card {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>flex-direction: column;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>gap: 10px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.blog-card h3 {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1.1rem;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.blog-meta {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.85rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: var(--muted);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>/* Contact form */</p>
-<p class="p1"><span class="Apple-converted-space">    </span>form {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: grid;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>gap: 14px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>max-width: 620px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>label {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 600;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.95rem;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>input, textarea, select {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>width: 100%;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 10px 12px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid var(--border);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 6px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.95rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-family: inherit;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>textarea {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>min-height: 120px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>resize: vertical;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>/* Booking section */</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.booking-box {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 40px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: var(--bg);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid var(--border);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 10px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 24px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>/* Footer */</p>
-<p class="p1"><span class="Apple-converted-space">    </span>footer {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-top: 1px solid var(--border);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 40px 0;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 40px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: var(--muted);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.9rem;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.footer-grid {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: grid;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));</p>
-<p class="p1"><span class="Apple-converted-space">      </span>gap: 24px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.footer-grid h4 {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: var(--text);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 8px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.footer-links {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>list-style: none;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.footer-links li {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 6px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>@media (max-width: 640px) {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.hero h1 { font-size: 1.8rem; }</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.section-title { font-size: 1.5rem; }</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;header&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="container"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;nav&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="#" class="logo"&gt;Dr. Seerat Kohli&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="nav-links"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;a href="#about"&gt;About&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;a href="#services"&gt;Services&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;a href="#blog"&gt;Blog&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;a href="#contact"&gt;Contact&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="#book" class="cta-button"&gt;Book a Session&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/nav&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/header&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;main&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Hero --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;section class="hero"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="container"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;h1&gt;Yoga-Informed Wellness for Mind, Body, and Purpose&lt;/h1&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>Integrative medical care rooted in yoga, breathwork, and personal development</p>
-<p class="p1"><span class="Apple-converted-space">          </span>for busy professionals who want sustainable health and growth.</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="hero-buttons"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;a href="#book" class="cta-button"&gt;Book a Session&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;a href="#blog" class="secondary-button"&gt;Read the Blog&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- About Preview --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="about"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="container"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2 class="section-title"&gt;About Dr. Seerat Kohli&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="section-subtitle"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>Physician and yoga specialist blending evidence-based medicine with mindful practice.</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="grid"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3&gt;Medical Expertise&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>As a physician, I help clients address stress, burnout, sleep,</p>
-<p class="p1"><span class="Apple-converted-space">              </span>and lifestyle-related conditions with a science-first approach.</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3&gt;Yoga &amp; Breathwork&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>Personalized yoga and pranayama prescriptions to support nervous system</p>
-<p class="p1"><span class="Apple-converted-space">              </span>regulation, energy, and resilience.</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3&gt;Personal Development&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>Coaching on purpose, boundaries, identity, and values-aligned living for</p>
-<p class="p1"><span class="Apple-converted-space">              </span>high-performing professionals.</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p style="margin-top:18px;"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;a href="#contact"&gt;Learn more about my background and approach →&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Services --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="services" style="background:#fff;"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="container"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2 class="section-title"&gt;Services&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="section-subtitle"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>One-to-one sessions and tailored programs designed around your goals and schedule.</p>
-<p class="p1"><span class="Apple-converted-space">          </span>No payments are processed on this website; booking requests are handled via email or calendar.</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="grid"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3&gt;Integrative Wellness Consultation&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>75-minute deep-dive into your health, lifestyle, stressors, and goals.</p>
-<p class="p1"><span class="Apple-converted-space">              </span>Includes a personalized plan and follow-up resources.</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;a href="#book" class="cta-button"&gt;Request Booking&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3&gt;Yoga &amp; Breathwork Prescription&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>Custom yoga sequence and breathing practices for anxiety, sleep, focus,</p>
-<p class="p1"><span class="Apple-converted-space">              </span>or recovery. Delivered with video guides and written instructions.</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;a href="#book" class="cta-button"&gt;Request Booking&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3&gt;Personal Development Coaching&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>60-minute coaching sessions on purpose, career transitions, boundaries,</p>
-<p class="p1"><span class="Apple-converted-space">              </span>and sustainable high performance.</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;a href="#book" class="cta-button"&gt;Request Booking&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="book" class="booking-box"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;h3 style="margin-bottom:10px;"&gt;Request a Session&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;p style="margin-bottom:16px; color:var(--muted);"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>This website does not process payments. Use the form below to request a session.</p>
-<p class="p1"><span class="Apple-converted-space">            </span>I will contact you to confirm availability, format, and next steps.</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/p&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;form id="booking-form"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;label for="b-name"&gt;Full Name&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;input id="b-name" name="name" type="text" required /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;label for="b-email"&gt;Email Address&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;input id="b-email" name="email" type="email" required /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;label for="b-service"&gt;Service Interested In&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;select id="b-service" name="service"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;option&gt;Integrative Wellness Consultation&lt;/option&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;option&gt;Yoga &amp; Breathwork Prescription&lt;/option&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;option&gt;Personal Development Coaching&lt;/option&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;option&gt;Not sure – please advise&lt;/option&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;/select&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;label for="b-message"&gt;Your Goals &amp; Availability&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;textarea id="b-message" name="message" required</p>
-<p class="p1"><span class="Apple-converted-space">                </span>placeholder="Briefly describe what you'd like to work on and your preferred times / time zone."&gt;&lt;/textarea&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;button type="submit" class="cta-button"&gt;Send Booking Request&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/form&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;p id="booking-success" style="display:none; margin-top:16px; color:var(--accent-dark); font-weight:600;"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>Thank you. Your booking request has been received (demo mode). When connected to a form service, this will email you directly.</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Blog --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="blog"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="container"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2 class="section-title"&gt;Latest from the Blog&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="section-subtitle"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>Articles on yoga, stress, sleep, lifestyle medicine, and personal growth.</p>
-<p class="p1"><span class="Apple-converted-space">          </span>New posts published regularly.</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="grid"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;article class="card blog-card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3&gt;A Doctor’s 10-Minute Morning Yoga Routine for Shift Workers&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="blog-meta"&gt;Example post • 6 min read&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>A simple, evidence-informed sequence to wake up the body, calm the mind,</p>
-<p class="p1"><span class="Apple-converted-space">              </span>and prepare for long shifts.</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;a href="#" onclick="alert('This is a demo. In your real site, each blog post would be its own page.'); return false;"&gt;Read more →&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/article&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;article class="card blog-card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3&gt;How to Spot Early Signs of Burnout (and What to Do Next)&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="blog-meta"&gt;Example post • 8 min read&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>Key warning signs healthcare professionals often miss, plus a practical</p>
-<p class="p1"><span class="Apple-converted-space">              </span>framework for recovery and prevention.</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;a href="#" onclick="alert('This is a demo. In your real site, each blog post would be its own page.'); return false;"&gt;Read more →&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/article&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;article class="card blog-card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3&gt;Breathwork for Anxiety: What the Evidence Says&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="blog-meta"&gt;Example post • 7 min read&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>Which breathing patterns are most effective for calming the nervous system,</p>
-<p class="p1"><span class="Apple-converted-space">              </span>and how to integrate them into a busy day.</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;a href="#" onclick="alert('This is a demo. In your real site, each blog post would be its own page.'); return false;"&gt;Read more →&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/article&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p style="margin-top:18px;"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;a href="#" onclick="alert('This is a demo blog index. In your real site, this could link to a full blog archive.'); return false;"&gt;View all articles →&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Contact --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="contact" style="background:#fff;"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="container"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2 class="section-title"&gt;Contact &amp; Partnerships&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="section-subtitle"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>For collaborations, speaking requests, or general inquiries, send a message below.</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;form id="contact-form"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;label for="c-name"&gt;Name&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;input id="c-name" name="name" type="text" required /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;label for="c-email"&gt;Email&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;input id="c-email" name="email" type="email" required /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;label for="c-type"&gt;Inquiry Type&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;select id="c-type" name="type"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;option&gt;General inquiry&lt;/option&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;option&gt;Partnership / Collaboration&lt;/option&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;option&gt;Speaking / Media&lt;/option&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;option&gt;Other&lt;/option&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/select&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;label for="c-message"&gt;Message&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;textarea id="c-message" name="message" required&gt;&lt;/textarea&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;button type="submit" class="cta-button"&gt;Send Message&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/form&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p id="contact-success" style="display:none; margin-top:16px; color:var(--accent-dark); font-weight:600;"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>Thank you. Your message has been received (demo mode). When connected to a form service, this will email you directly.</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div style="margin-top:24px; color:var(--muted); font-size:0.95rem;"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>Based in New York City, working with clients worldwide via secure video</p>
-<p class="p1"><span class="Apple-converted-space">            </span>sessions. For urgent medical concerns, please contact your local healthcare</p>
-<p class="p1"><span class="Apple-converted-space">            </span>provider or emergency services.</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/main&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;footer&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="container"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="footer-grid"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;h4&gt;Dr. Seerat Kohli&lt;/h4&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>Physician and yoga specialist helping professionals build sustainable</p>
-<p class="p1"><span class="Apple-converted-space">            </span>health and purpose through integrative wellness.</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;h4&gt;Navigation&lt;/h4&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;ul class="footer-links"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;&lt;a href="#about"&gt;About&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;&lt;a href="#services"&gt;Services&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;&lt;a href="#blog"&gt;Blog&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;&lt;a href="#contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;h4&gt;Legal&lt;/h4&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;ul class="footer-links"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;&lt;a href="#" onclick="alert('Add your Privacy Policy content here.'); return false;"&gt;Privacy Policy&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;&lt;a href="#" onclick="alert('Add your Terms of Service content here.'); return false;"&gt;Terms of Service&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;&lt;a href="#" onclick="alert('Add your Medical Disclaimer content here.'); return false;"&gt;Medical Disclaimer&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;h4&gt;Connect&lt;/h4&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;ul class="footer-links"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;&lt;a href="#" onclick="alert('Add your Instagram link here.'); return false;"&gt;Instagram&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;&lt;a href="#" onclick="alert('Add your YouTube link here.'); return false;"&gt;YouTube&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;&lt;a href="#" onclick="alert('Add your LinkedIn link here.'); return false;"&gt;LinkedIn&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;&lt;a href="#" onclick="alert('Add your newsletter signup link here.'); return false;"&gt;Newsletter&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p style="margin-top:24px; font-size:0.85rem;"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>© 2026 Dr. Seerat Kohli. All rights reserved. This site is for educational</p>
-<p class="p1"><span class="Apple-converted-space">        </span>purposes and does not replace personalized medical care.</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/footer&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>// Demo form handlers – replace with a real form service (e.g., Formspree) later.</p>
-<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('booking-form').addEventListener('submit', function(e) {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>e.preventDefault();</p>
-<p class="p1"><span class="Apple-converted-space">      </span>document.getElementById('booking-success').style.display = 'block';</p>
-<p class="p1"><span class="Apple-converted-space">      </span>this.reset();</p>
-<p class="p1"><span class="Apple-converted-space">      </span>setTimeout(() =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById('booking-success').style.display = 'none';</p>
-<p class="p1"><span class="Apple-converted-space">      </span>}, 6000);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>});</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('contact-form').addEventListener('submit', function(e) {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>e.preventDefault();</p>
-<p class="p1"><span class="Apple-converted-space">      </span>document.getElementById('contact-success').style.display = 'block';</p>
-<p class="p1"><span class="Apple-converted-space">      </span>this.reset();</p>
-<p class="p1"><span class="Apple-converted-space">      </span>setTimeout(() =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById('contact-success').style.display = 'none';</p>
-<p class="p1"><span class="Apple-converted-space">      </span>}, 6000);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>});</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+<div class="wrap">
+  <header class="hero">
+    <div class="avatar" id="avatar" aria-hidden="true"></div>
+    <h1 id="name"></h1>
+    <p class="where" id="where"></p>
+    <p class="tagline" id="tagline"></p>
+    <div class="switch" role="group" aria-label="Choose your view" id="switch"></div>
+    <nav class="links" id="links" aria-label="Social and contact links"></nav>
+  </header>
+
+  <main id="content"></main>
+  <footer id="footer"></footer>
+</div>
+
+<script>
+/* ==========================================================
+   EDIT THIS BLOCK ONLY. Everything on the page comes from here.
+   Change the text between the quotes. Keep the quotes and commas.
+   Lines marked  >> ADD <<  are placeholders for you to fill in.
+   ========================================================== */
+const SITE = {
+  name: "Seerat Kohli",
+  location: "",            // e.g. "New York, NY". Leave "" to hide.
+
+  // Optional photo: paste a data URI (data:image/jpeg;base64,...). Leave "" for initials.
+  photo: "",
+
+  // Leave any link as "" to hide it.
+  links: {
+    linkedin:  "https://www.linkedin.com/in/seeratkohli/",
+    instagram: "https://www.instagram.com/SeeratKohlii/",
+    email:     "",         // >> ADD << your public email if you want one
+    tiktok:    "",
+    youtube:   "",
+    x:         "",
+    github:    ""
+  },
+
+  // The three views and the names on the switch buttons.
+  views: [
+    { key: "recruiters", label: "Recruiters"   },
+    { key: "clients",    label: "Clients"      },
+    { key: "personal",   label: "Off the clock" }
+  ],
+
+  /* ---------- VIEW 1: Recruiters (your product career) ---------- */
+  recruiters: {
+    lead: "linkedin",                      // which button is highlighted
+    contactVia: ["email", "linkedin"],     // first one that exists is used
+    tagline: "Strategic, data-forward product manager with 6+ years of turning messy problems into products people use.",
+    about: [
+      "I'm a product manager who starts with the customer problem, backs decisions with data, and works closely with engineering and design to ship things that matter.",
+      "Over 6+ years I've learned that great product work is equal parts strategy and follow-through: knowing what to build, why now, and how we'll know it worked."
+    ],
+    strengthsTitle: "What I bring",
+    strengths: ["Product strategy", "Roadmapping", "Data and analytics", "Experimentation", "Stakeholder alignment", "Cross-functional leadership"],
+    howTitle: "How I work",
+    how: [
+      { label: "Strategy", text: "Start with the customer problem and the business goal, then decide what not to build." },
+      { label: "Data",     text: "Define success metrics up front, instrument early, and let the numbers settle debates." },
+      { label: "Delivery", text: "Keep scope tight, communicate clearly, and ship in steps that teach the team something." },
+      { label: "People",   text: "Make decisions with engineering, design and stakeholders, not for them." }
+    ],
+    experienceTitle: "Experience",
+    experience: [
+      { when: ">> ADD << years", title: "Product Manager", place: ">> ADD << company", note: ">> ADD << one line on what you owned and a result you can point to." },
+      { when: ">> ADD << years", title: ">> ADD << role",  place: ">> ADD << company", note: ">> ADD << one line about the impact you had." },
+      { when: ">> ADD << years", title: ">> ADD << role",  place: ">> ADD << company", note: ">> ADD << one line about the impact you had." }
+    ],
+    contactTitle: "Hiring for a product role?",
+    contactText:  "I'd love to hear what you're building. Let's talk."
+  },
+
+  /* ---------- VIEW 2: Clients (your side-gig) ---------- */
+  clients: {
+    lead: "linkedin",
+    contactVia: ["email", "linkedin", "instagram"],
+    tagline: "Need a product brain on the side? I help founders and small teams turn ideas and data into clear next steps.",
+    about: [
+      "Alongside my full-time product work, I take on a small number of side projects where a fresh, strategic and data-minded perspective can move things forward faster.",
+      "If you're stuck choosing what to build, unsure which numbers matter, or need a plan your team can actually follow, I can help."
+    ],
+    helpTitle: "How I can help",
+    help: ["Product strategy", "Roadmap planning", "Metrics and dashboards", "Customer research", "Prioritization", "Launch planning"],
+    offersTitle: "Ways to work together",
+    // >> ADD << Replace these three with your real offers and prices/timelines if you like.
+    offers: [
+      { title: "Strategy session",      desc: "A focused conversation to untangle your biggest product question and leave with next steps.", link: "" },
+      { title: "Metrics review",        desc: "We look at your data together and decide which numbers to track and what they're telling you.", link: "" },
+      { title: "Roadmap sprint",        desc: "A short project to turn your goals into a clear, prioritized plan.", link: "" }
+    ],
+    processTitle: "How it works",
+    process: [
+      { label: "Intro call", text: "We chat about your goals and see if I'm the right fit." },
+      { label: "Scope",      text: "I send a short plan with what you'll get and when." },
+      { label: "Delivery",   text: "We work together and you finish with something you can use right away." }
+    ],
+    contactTitle: "Start a conversation",
+    contactText:  "Tell me a little about what you're working on."
+  },
+
+  /* ---------- VIEW 3: Off the clock (personal) ---------- */
+  personal: {
+    lead: "instagram",
+    contactVia: ["instagram", "email", "linkedin"],
+    tagline: "The side of me that doesn't fit on a résumé.",
+    about: [
+      "When I'm not working on roadmaps and metrics, this is where you'll find the rest of me.",
+      "I share more day to day on Instagram, so come say hi."
+    ],
+    lovesTitle: "Things I love",
+    loves: [">> ADD << a thing you love", ">> ADD << another", ">> ADD << one more"],
+    latelyTitle: "Lately",
+    lately: [
+      { label: "Reading",  text: ">> ADD << what's on your nightstand." },
+      { label: "Watching", text: ">> ADD << what you're into right now." },
+      { label: "Planning", text: ">> ADD << a trip, a project, a goal." }
+    ],
+    contactTitle: "Say hello",
+    contactText:  "The best place to reach me for non-work stuff is Instagram."
+  }
+};
+/* ============== End of editable block ============== */
+
+
+(function () {
+  var VIEWS = SITE.views;
+  var mode = VIEWS[0].key;
+
+  var $ = function (id) { return document.getElementById(id); };
+  function el(tag, cls, text) {
+    var n = document.createElement(tag);
+    if (cls) n.className = cls;
+    if (text != null) n.textContent = text;
+    return n;
+  }
+  function safeUrl(u) { return /^https?:\/\//i.test(u || "") ? u : ""; }
+  function validKey(k) { return VIEWS.some(function (v) { return v.key === k; }) ? k : null; }
+  function initials(name) {
+    return name.split(/\s+/).filter(Boolean).slice(0, 2).map(function (w) { return w[0].toUpperCase(); }).join("");
+  }
+  function readModeFromUrl() {
+    var h = (location.hash || "").replace("#", "").toLowerCase();
+    var q = "";
+    try { q = (new URLSearchParams(location.search).get("mode") || "").toLowerCase(); } catch (e) {}
+    return validKey(h) || validKey(q);
+  }
+
+  function section(titleText) {
+    var s = el("section");
+    s.appendChild(el("h2", null, titleText));
+    return s;
+  }
+  function paragraphs(arr) {
+    var f = document.createDocumentFragment();
+    (arr || []).forEach(function (t) { f.appendChild(el("p", null, t)); });
+    return f;
+  }
+  function chips(arr) {
+    var ul = el("ul", "chips");
+    (arr || []).forEach(function (t) { ul.appendChild(el("li", null, t)); });
+    return ul;
+  }
+  function rows(items, whenKey, titleFn, textKey) {
+    var ul = el("ul", "rows");
+    (items || []).forEach(function (r) {
+      var li = el("li");
+      li.appendChild(el("div", "when", r[whenKey]));
+      var w = el("div", "what");
+      if (titleFn) w.appendChild(el("strong", null, titleFn(r)));
+      w.appendChild(el("span", null, r[textKey]));
+      li.appendChild(w);
+      ul.appendChild(li);
+    });
+    return ul;
+  }
+  function cards(items) {
+    var grid = el("div", "cards");
+    (items || []).forEach(function (it) {
+      var u = safeUrl(it.link);
+      var card = u ? el("a") : el("div", "item");
+      if (u) { card.href = u; card.target = "_blank"; card.rel = "noopener noreferrer"; }
+      card.appendChild(el("h3", null, it.title));
+      card.appendChild(el("p", null, it.desc));
+      grid.appendChild(card);
+    });
+    return grid;
+  }
+
+  function contactBlock(data) {
+    var L = SITE.links;
+    var s = el("section");
+    var box = el("div", "contact");
+    box.appendChild(el("h2", null, data.contactTitle));
+    box.appendChild(el("p", null, data.contactText));
+
+    var options = {
+      email:     L.email ? { href: "mailto:" + L.email, label: "Email me" } : null,
+      linkedin:  safeUrl(L.linkedin)  ? { href: L.linkedin,  label: "Message me on LinkedIn" }  : null,
+      instagram: safeUrl(L.instagram) ? { href: L.instagram, label: "Message me on Instagram" } : null
+    };
+    var pick = null;
+    (data.contactVia || []).some(function (k) { if (options[k]) { pick = options[k]; return true; } return false; });
+    if (pick) {
+      var a = el("a", null, pick.label);
+      a.href = pick.href;
+      if (pick.href.indexOf("http") === 0) { a.target = "_blank"; a.rel = "noopener noreferrer"; }
+      box.appendChild(a);
+    }
+    s.appendChild(box);
+    return s;
+  }
+
+  function renderLinks(lead) {
+    var nav = $("links");
+    nav.textContent = "";
+    var L = SITE.links;
+    var defs = [
+      ["linkedin", "LinkedIn"], ["instagram", "Instagram"], ["email", "Email"],
+      ["tiktok", "TikTok"], ["youtube", "YouTube"], ["x", "X"], ["github", "GitHub"]
+    ];
+    var ordered = defs.slice().sort(function (a, b) { return (b[0] === lead) - (a[0] === lead); });
+    ordered.forEach(function (d) {
+      var val = L[d[0]];
+      if (!val) return;
+      var a = el("a", d[0] === lead ? "primary" : "", d[1]);
+      if (d[0] === "email") a.href = "mailto:" + val;
+      else { var u = safeUrl(val); if (!u) return; a.href = u; a.target = "_blank"; a.rel = "noopener noreferrer"; }
+      nav.appendChild(a);
+    });
+  }
+
+  var RENDERERS = {
+    recruiters: function (root, D) {
+      var about = section("About"); about.appendChild(paragraphs(D.about)); root.appendChild(about);
+      var st = section(D.strengthsTitle); st.appendChild(chips(D.strengths)); root.appendChild(st);
+      var how = section(D.howTitle); how.appendChild(rows(D.how, "label", null, "text")); root.appendChild(how);
+      var ex = section(D.experienceTitle);
+      ex.appendChild(rows(D.experience, "when", function (r) { return r.title + ", " + r.place; }, "note"));
+      root.appendChild(ex);
+      root.appendChild(contactBlock(D));
+    },
+    clients: function (root, D) {
+      var about = section("About"); about.appendChild(paragraphs(D.about)); root.appendChild(about);
+      var h = section(D.helpTitle); h.appendChild(chips(D.help)); root.appendChild(h);
+      var o = section(D.offersTitle); o.appendChild(cards(D.offers)); root.appendChild(o);
+      var p = section(D.processTitle); p.appendChild(rows(D.process, "label", null, "text")); root.appendChild(p);
+      root.appendChild(contactBlock(D));
+    },
+    personal: function (root, D) {
+      var about = section("A bit about me"); about.appendChild(paragraphs(D.about)); root.appendChild(about);
+      var l = section(D.lovesTitle); l.appendChild(chips(D.loves)); root.appendChild(l);
+      var la = section(D.latelyTitle); la.appendChild(rows(D.lately, "label", null, "text")); root.appendChild(la);
+      root.appendChild(contactBlock(D));
+    }
+  };
+
+  function renderSwitch() {
+    var wrap = $("switch");
+    wrap.textContent = "";
+    VIEWS.forEach(function (v) {
+      var b = el("button", null, v.label);
+      b.type = "button";
+      b.setAttribute("aria-pressed", String(v.key === mode));
+      b.addEventListener("click", function () { setMode(v.key, true); });
+      wrap.appendChild(b);
+    });
+  }
+
+  function render() {
+    var D = SITE[mode];
+    document.documentElement.setAttribute("data-mode", mode);
+    $("tagline").textContent = D.tagline;
+    renderSwitch();
+    renderLinks(D.lead);
+    var root = $("content");
+    root.textContent = "";
+    RENDERERS[mode](root, D);
+  }
+
+  function setMode(m, updateUrl) {
+    mode = m;
+    render();
+    if (updateUrl) { try { history.replaceState(null, "", "#" + m); } catch (e) {} }
+  }
+
+  // Static parts
+  document.title = SITE.name;
+  $("name").textContent = SITE.name;
+  $("where").textContent = SITE.location || "";
+  var av = $("avatar");
+  if (SITE.photo && /^data:image\//.test(SITE.photo)) {
+    var img = document.createElement("img");
+    img.src = SITE.photo; img.alt = "";
+    av.appendChild(img);
+  } else {
+    av.textContent = initials(SITE.name);
+  }
+  $("footer").textContent = "© " + new Date().getFullYear() + " " + SITE.name;
+
+  window.addEventListener("hashchange", function () {
+    var m = readModeFromUrl();
+    if (m && m !== mode) setMode(m, false);
+  });
+
+  mode = readModeFromUrl() || VIEWS[0].key;
+  render();
+})();
+</script>
 </body>
 </html>
